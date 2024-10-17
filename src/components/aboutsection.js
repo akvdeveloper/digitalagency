@@ -25,7 +25,9 @@ export default function AboutSection() {
               className="w-full h-auto object-cover transition-transform duration-500 transform group-hover:scale-110"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-2xl font-bold">Innovate • Transform • Succeed</span>
+              <span className="text-blue-900 text-2xl font-bold text-shadow-lg" style={{ textShadow: '2px 2px 0 #FFFF00, -2px 2px 0 #FFFF00, 2px -2px 0 #FFFF00, -2px -2px 0 #FFFF00' }}>
+                Innovate • Transform • Succeed
+              </span>
             </div>
           </div>
 
@@ -34,7 +36,7 @@ export default function AboutSection() {
             <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">About Our IT & Digital Marketing Company</h3>
             <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">Empowering Your Digital Future</h2>
             <p className="text-lg text-gray-700 dark:text-gray-300">
-              At TechNova Solutions, we're not just an IT company – we're your partners in digital transformation and marketing excellence. Our passion lies in crafting innovative solutions that propel businesses into the future. With a team of expert developers, visionary designers, and strategic marketers, we turn complex challenges into streamlined successes.
+              At TechNova Solutions, we&apos;re not just an IT company – we&apos;re your partners in digital transformation and marketing excellence. Our passion lies in crafting innovative solutions that propel businesses into the future. With a team of expert developers, visionary designers, and strategic marketers, we turn complex challenges into streamlined successes.
             </p>
 
             {/* Features Section */}

@@ -1,15 +1,16 @@
 "use client";
 import React from 'react';
 import Slider from 'react-slick';
+import Image from 'next/image';
 
 const ClientsCarousel = () => {
   const clients = [
-    { id: 1, src: 'https://via.placeholder.com/150/FF0000/FFFFFF?text=Client+1', alt: 'Client 1' },
-    { id: 2, src: 'https://via.placeholder.com/150/00FF00/FFFFFF?text=Client+2', alt: 'Client 2' },
-    { id: 3, src: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=Client+3', alt: 'Client 3' },
-    { id: 4, src: 'https://via.placeholder.com/150/FFFF00/FFFFFF?text=Client+4', alt: 'Client 4' },
-    { id: 5, src: 'https://via.placeholder.com/150/FF00FF/FFFFFF?text=Client+5', alt: 'Client 5' },
-    { id: 6, src: 'https://via.placeholder.com/150/00FFFF/FFFFFF?text=Client+6', alt: 'Client 6' },
+    { id: 1, src: '/img/client/client-1.png', alt: 'Client 1' },
+    { id: 2, src: '/img/client/client-1.png', alt: 'Client 2' },
+    { id: 3, src: '/img/client/client-1.png', alt: 'Client 3' },
+    { id: 4, src: '/img/client/client-1.png', alt: 'Client 4' },
+    { id: 5, src: '/img/client/client-1.png', alt: 'Client 5' },
+    { id: 6, src: '/img/client/client-1.png', alt: 'Client 6' },
   ];
 
   const settings = {
@@ -44,7 +45,7 @@ const ClientsCarousel = () => {
   };
 
   return (
-    <div className="py-8 bg-gray-900">
+    <div className="py-8 bg-gray-900 px-4 lg:px-28">
       <h2 className="text-3xl font-bold text-center mb-4 text-gray-100">Our Clients</h2>
       <div className="flex flex-col md:flex-row md:justify-between md:items-center">
         {/* Content Section */}
@@ -60,10 +61,12 @@ const ClientsCarousel = () => {
           <Slider {...settings}>
             {clients.map(client => (
               <div key={client.id} className="flex justify-center items-center p-4">
-                <img
+                <Image
                   src={client.src}
                   alt={client.alt}
                   className="h-26 w-auto object-contain mx-auto" // Center the image
+                  height={400}
+                  width={600}
                 />
               </div>
             ))}

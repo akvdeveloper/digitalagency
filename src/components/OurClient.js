@@ -1,13 +1,14 @@
+"use client";
 import React from 'react';
-
+import Image from 'next/image';
 const OurClients = () => {
   const clients = [
-    "https://source.unsplash.com/random/200x100?logo",
-    "https://source.unsplash.com/random/200x100?brand",
-    "https://source.unsplash.com/random/200x100?company",
-    "https://source.unsplash.com/random/200x100?business",
-    "https://source.unsplash.com/random/200x100?enterprise",
-    "https://source.unsplash.com/random/200x100?corporation",
+    "/img/client/client-1.png",
+    "/img/client/client-1.png",
+    "/img/client/client-1.png",
+    "/img/client/client-1.png",
+    "/img/client/client-1.png",
+    "/img/client/client-1.png",
   ];
 
   return (
@@ -20,7 +21,7 @@ const OurClients = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {clients.map((client, index) => (
             <div key={index} className="flex items-center justify-center">
-              <img src={client} alt={`Client ${index + 1}`} className="max-w-full h-auto" />
+              <Image src={client} alt={`Client ${index + 1}`} className="max-w-full h-auto" width={200} height={100} />
             </div>
           ))}
         </div>

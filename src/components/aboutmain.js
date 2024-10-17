@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { FaUsers, FaRocket, FaBullseye, FaLightbulb, FaChevronDown } from 'react-icons/fa'; // Import react-icons
+import { FaUsers, FaRocket, FaBullseye, FaLightbulb } from 'react-icons/fa'; // Import react-icons
+import Image from 'next/image';
 
 const AboutMain = () => {
-  const [activeTab, setActiveTab] = useState('story'); // Removed type declarations
+  const [activeTab, setActiveTab] = useState('story');
 
   const tabs = [
     { id: 'story', label: 'Our Story' },
@@ -14,25 +15,26 @@ const AboutMain = () => {
     { icon: <FaLightbulb />, text: "Innovation: We are constantly exploring new technologies and strategies to stay ahead in the digital world." },
     { icon: <FaUsers />, text: "Collaboration: We believe in working closely with our clients to understand their goals and develop customized solutions." },
     { icon: <FaBullseye />, text: "Transparency: We maintain open and honest communication with our clients, providing regular updates and insights." },
-    { icon: <FaRocket />, text: "Results-Driven: Everything we do is focused on delivering measurable results that impact our clients' bottom lines." }
+    { icon: <FaRocket />, text: "Results-Driven: Everything we do is focused on delivering measurable results that impact our clients&apos; bottom lines." } // Escaped apostrophe
   ];
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="container mx-auto px-4">
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="relative">
             <div className="w-full h-96 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg shadow-2xl transform rotate-3"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" 
+            <Image 
+              src="/img/features/about-5.jpg" 
               alt="Team collaboration" 
+              width={550}
+              height={400}
               className="absolute inset-0 w-full h-96 object-cover rounded-lg shadow-2xl transform -rotate-3 transition-transform hover:rotate-0 duration-300"
             />
           </div>
           <div className="space-y-8">
             <p className="text-xl leading-relaxed text-gray-700">
-              At <span className="font-semibold text-blue-600">TechVision Solutions</span>, we are a full-service IT and digital marketing agency dedicated to driving growth for our clients in today's digital landscape. With a team of skilled developers, designers, and marketing experts, we offer cutting-edge solutions that combine technical expertise with creative marketing strategies to help businesses thrive.
+              At <span className="font-semibold text-blue-600">TechVision Solutions</span>, we are a full-service IT and digital marketing agency dedicated to driving growth for our clients in today&apos;s digital landscape. With a team of skilled developers, designers, and marketing experts, we offer cutting-edge solutions that combine technical expertise with creative marketing strategies to help businesses thrive.
             </p>
             <div className="bg-white rounded-lg shadow-xl p-6 space-y-4">
               <div className="flex space-x-4">

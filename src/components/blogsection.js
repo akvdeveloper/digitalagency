@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 function BlogSection() {
   // Placeholder function for read more button click
   const handleReadMore = () => {
@@ -12,26 +12,26 @@ function BlogSection() {
       date: 'Jan 01, 2023',
       title: 'Clever ways to invest in product to organize your portfolio',
       description: 'Discover smart investment strategies to streamline and organize your portfolio.',
-      imgUrl: 'https://pagedone.io/asset/uploads/1696244317.png',
+      imgUrl: '/img/blog/blog-1.png',
     },
     {
       id: 2,
       date: 'Feb 01, 2023',
       title: 'How to grow your profit through systematic investment with us',
       description: 'Unlock the power of systematic investment with us and watch your profits soar.',
-      imgUrl: 'https://pagedone.io/asset/uploads/1696244340.png',
+      imgUrl: '/img/blog/blog-2.png',
     },
     {
       id: 3,
       date: 'Mar 01, 2023',
       title: 'How to analyze every holdings of your portfolio',
       description: 'Our comprehensive guide will equip you with the tools and insights needed to analyze your portfolio.',
-      imgUrl: 'https://pagedone.io/asset/uploads/1696244356.png',
+      imgUrl: '/img/blog/blog-3.png',
     },
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24 bg-blue-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="font-manrope text-4xl font-bold text-gray-900 text-center mb-16">
           Our Latest Blog
@@ -40,10 +40,12 @@ function BlogSection() {
           {blogPosts.map((post) => (
             <div key={post.id} className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
               <div className="flex items-center">
-                <img
+                <Image
                   src={post.imgUrl}
                   alt={post.title}
                   className="rounded-t-2xl w-full object-cover"
+                  width={600}
+                  height={400}
                 />
               </div>
               <div className="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">

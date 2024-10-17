@@ -8,7 +8,7 @@ const Testimonial = ({ quote, author, company }) => (
         <FaStar key={i} size={20} className="text-yellow-400 fill-current" />
       ))}
     </div>
-    <p className="mb-4 italic">"{quote}"</p>
+    <p className="mb-4 italic">&quot;{quote}&quot;</p> {/* Escape double quotes here */}
     <p className="font-semibold">{author}</p>
     <p className="text-gray-600">{company}</p>
   </div>
@@ -18,19 +18,19 @@ const ClientTestimonials = () => {
   const testimonials = [
     {
       quote:
-        "[Agency Name] helped us redesign our website and implement a comprehensive SEO strategy. Our traffic has increased by 150% and our sales have seen significant growth. We couldn't be happier!",
+        "&quot;[Agency Name] helped us redesign our website and implement a comprehensive SEO strategy. Our traffic has increased by 150% and our sales have seen significant growth. We couldn't be happier!&quot;", // Escape double quotes here
       author: "John Smith",
       company: "Tech Innovations Inc.",
     },
     {
       quote:
-        "The team at [Agency Name] truly understands digital marketing. Their PPC campaigns have dramatically improved our ROI and customer acquisition rates.",
+        "&quot;The team at [Agency Name] truly understands digital marketing. Their PPC campaigns have dramatically improved our ROI and customer acquisition rates.&quot;", // Escape double quotes here
       author: "Sarah Johnson",
       company: "E-commerce Solutions Ltd.",
     },
     {
       quote:
-        "Working with [Agency Name] has been a game-changer for our IT infrastructure. Their cloud solutions have improved our efficiency and scalability.",
+        "&quot;Working with [Agency Name] has been a game-changer for our IT infrastructure. Their cloud solutions have improved our efficiency and scalability.&quot;", // Escape double quotes here
       author: "Michael Brown",
       company: "Global Manufacturing Co.",
     },

@@ -3,12 +3,12 @@ import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 export default function Portfolio()  {
     const data = [
-      { src: 'https://via.placeholder.com/300', alt: 'Project 1' },
-      { src: 'https://via.placeholder.com/300', alt: 'Project 2' },
-      { src: 'https://via.placeholder.com/300', alt: 'Project 3' },
-      { src: 'https://via.placeholder.com/300', alt: 'Project 4' },
-      { src: 'https://via.placeholder.com/300', alt: 'Project 5' },
-      { src: 'https://via.placeholder.com/300', alt: 'Project 6' },
+      { src: '/img/portfollio/swing.jpeg', alt: 'Project 1' },
+      { src: '/img/portfollio/swing.jpeg', alt: 'Project 2' },
+      { src: '/img/portfollio/ssisara.jpeg', alt: 'Project 3' },
+      { src: '/img/portfollio/ssisara.jpeg', alt: 'Project 4' },
+      { src: '/img/portfollio/compc.jpeg', alt: 'Project 5' },
+      { src: '/img/portfollio/compc.jpeg', alt: 'Project 6' },
     ];
   
     return (
@@ -17,7 +17,7 @@ export default function Portfolio()  {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
           {data.map(({ src, alt }, index) => (
             <div key={index} className="relative">
-              <img src={src} alt={alt} width={300} height={200} className="object-cover" />
+              <Image src={src} alt={alt} width={300} height={200} className="object-cover" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-lg">
                 {alt}
               </div>

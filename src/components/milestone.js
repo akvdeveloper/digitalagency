@@ -27,13 +27,15 @@ const Milestone = () => {
       }
     );
 
-    if (milestoneRef.current) {
-      observer.observe(milestoneRef.current);
+    const currentRef = milestoneRef.current; // Capture the current ref value
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (milestoneRef.current) {
-        observer.unobserve(milestoneRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef); // Use the captured ref value
       }
     };
   }, []);
